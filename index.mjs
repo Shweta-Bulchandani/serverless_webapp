@@ -51,8 +51,8 @@ export const handler = async (event) => {
         .create(mailgunDomain, {
           from: `CSYE6225 <shweta@${mailgunDomain}>`,
           to: [snsMessage.email],
-          subject: "Assignment submission accepted",
-          text: `Your submission was successfully received and verified at ${fileloc}. Thank you.`,
+          subject: "CSYE 6225 Cloud Computing - Assignment submission accepted",
+          text: `We've successfully received and confirmed your submission at ${fileloc}. Appreciate it.`,
         })
         .then((msg) => console.log(msg))
         .catch((err) => console.error(err));
@@ -68,8 +68,8 @@ export const handler = async (event) => {
         .create(mailgunDomain, {
           from: `CSYE6225 <shweta@${mailgunDomain}>`,
           to: [snsMessage.email],
-          subject: "Assignment submission failed",
-          text: "Your submission could not be downloaded. Please verify the URL and resubmit.",
+          subject: "CSYE 6225 Cloud Computing - Assignment submission failed",
+          text: "The download of your submission failed. Please check the URL and submit it again.",
         })
         .then((msg) => console.log(msg))
         .catch((err) => console.error(err));
